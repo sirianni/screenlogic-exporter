@@ -1,0 +1,16 @@
+{
+  "name": "screenlogic-exporter",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "description": "",
+  "dependencies": {
+    "node-screenlogic": "^2.0.0",
+    "prom-client": "^15.1.2"
+  }
+}
