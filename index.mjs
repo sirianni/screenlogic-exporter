@@ -1,4 +1,14 @@
-import * as ScreenLogic from "node-screenlogic";
+import * as ScreenLogic from 'node-screenlogic';
+import { Registry, collectDefaultMetrics } from 'prom-client'
+import Fastify from 'fastify'
+
+const register = new Registry();
+collectDefaultMetrics({ register });
+
+fastify.get('/metrics', async (request, reply) => {
+  reply.header('Content-Type', register.contentType);
+  return register.metrics();
+});
 
 const finder = new ScreenLogic.FindUnits();
 const units = await finder.searchAsync();
