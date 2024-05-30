@@ -1,0 +1,18 @@
+[project]
+name = "screenlogic-exporter"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Eric Sirianni", email = "eric.sirianni@gmail.com"},
+]
+dependencies = [
+    "prometheus-client>=0.20.0",
+    "screenlogicpy>=0.10.1",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
