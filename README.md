@@ -2,4 +2,4 @@
 
 Prometheus exporter for Pentair ScreenLogic pool controller.
 
-Built using https://github.com/dieselrabbit/screenlogicpy
+Built using [screenlogic.py](https://github.com/dieselrabbit/screenlogicpy)
