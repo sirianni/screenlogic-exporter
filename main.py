@@ -39,7 +39,13 @@ class CustomCollector(Collector):
       yield m
 
   async def async_collect(self):
-    await self.gateway.async_update()
+    try:
+      await self.gateway.async_update()
+    except Exception as e:
+      logger.exception('Failed to update gateway')
+      logger.info('Trying to reconnect...')
+      self.gateway = await self.connect()
+      await self.gateway.async_update()
 
     return [
       *self.collect_misc(),
