@@ -6,8 +6,5 @@ Built using [screenlogic.py](https://github.com/dieselrabbit/screenlogicpy)
 
 # Usage
 ```
-make build
-```
-```
 docker run --net=host sirianni/screenlogic-exporter
 ```
