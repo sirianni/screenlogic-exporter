@@ -1,0 +1,11 @@
+# systemd container unit file for use with podman-systemd.unit
+[Container]
+ContainerName=screenlogic-exporter
+Image=docker.io/sirianni/screenlogic-exporter
+Network=host
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
